@@ -47,6 +47,11 @@ img {
 	width: 2rem;
 }
 
+.container {
+	max-width: 140rem;
+	margin: 0 auto;
+}
+
 button {
 	font-family: "Rubik", sans-serif;
 	font-size: 1.4rem;
