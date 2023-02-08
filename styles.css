@@ -11,7 +11,7 @@
 body {
 	width: 100%;
 	height: 100vh;
-
+	overflow-x: hidden;
 	scroll-behavior: smooth;
 }
 
@@ -48,7 +48,7 @@ img {
 }
 
 .container {
-	max-width: 140rem;
+	max-width: 130rem;
 	margin: 0 auto;
 }
 
@@ -59,11 +59,22 @@ button {
 	border: none;
 	border-radius: 0.5rem;
 	height: 4.8rem;
+	cursor: pointer;
 }
 
 .blue-btn {
 	background-color: var(--Soft-Blue);
 	color: #fff;
+}
+
+.orng-btn:hover {
+	background-color: #fff;
+	color: var(--Soft-Red);
+	border: 3px solid var(--Soft-Red);
+}
+
+.orng-btn:hover .login {
+	color: var(--Soft-Red);
 }
 
 .flex {
@@ -80,6 +91,10 @@ h3 {
 
 a {
 	text-decoration: none;
+}
+
+a:hover {
+	color: var(--Soft-Red);
 }
 
 li {
@@ -249,10 +264,21 @@ li {
 	width: 14rem;
 }
 
+.blue-btn:hover {
+	border: 3px solid var(--Soft-Blue);
+	background-color: transparent;
+	color: var(--Soft-Blue);
+}
+
 .wht-btn {
 	background-color: #eeeeee;
 	color: var(--Very-Dark-Blue);
 	box-shadow: var(--blur);
+}
+
+.wht-btn:hover {
+	background-color: transparent;
+	border: 2px solid var(--Very-Dark-Blue);
 }
 
 /*! HERO  */
@@ -273,6 +299,11 @@ li {
 	border-top: 1px solid #0000003f;
 	width: 80%;
 	margin: 0 auto;
+	cursor: pointer;
+}
+
+.feat-nav:hover {
+	color: var(--Soft-Red);
 }
 
 .feat-active {
@@ -418,6 +449,11 @@ li {
 
 .faq-ques {
 	margin: 2rem auto;
+	cursor: pointer;
+}
+
+.faq-ques:hover {
+	color: var(--Soft-Red);
 }
 
 .faq .faq-answer {
@@ -541,6 +577,10 @@ footer {
 	margin: 4rem auto 2rem;
 }
 
+.socials a:hover path {
+	fill: var(--Soft-Red);
+}
+
 .attribution {
 	color: var(--Soft-Red);
 	font-size: 1.2rem;
@@ -559,7 +599,7 @@ footer {
 		font-family: "Rubik", sans-serif;
 		font-size: 1.7rem;
 		border-radius: 0.5rem;
-		height: 5.8rem;
+		height: 5rem;
 	}
 
 	.section-info h2 {
@@ -613,14 +653,6 @@ footer {
 		z-index: 100;
 	}
 
-	/* ? NAV-ACTIVE  */
-	.navigations-active {
-		top: 0;
-		left: 0;
-		bottom: 0;
-		transition: 0.5s;
-	}
-
 	.navigations header {
 		margin-bottom: 0;
 	}
@@ -645,6 +677,7 @@ footer {
 
 	.nav-link {
 		color: var(--Very-Dark-Blue);
+		font-weight: 500;
 	}
 
 	.nav-login {
@@ -670,9 +703,6 @@ footer {
 	/*! HEADER  */
 
 	/*! HERO  */
-	.hero {
-		overflow: hidden;
-	}
 
 	.img-con {
 		width: 60rem;
@@ -781,7 +811,6 @@ footer {
 	.feat-article button {
 		margin: 0;
 		padding: 0 2rem;
-		height: 4rem;
 	}
 
 	.feat-d-none {
@@ -802,6 +831,10 @@ footer {
 
 	.faq p {
 		font-size: 1.7rem;
+	}
+
+	.faq:first-child {
+		border-top: 1px solid #0000003f;
 	}
 
 	.faqs button {
@@ -840,7 +873,7 @@ footer {
 
 	input {
 		font-size: 1.7rem;
-		height: 5.8rem;
+		height: 5rem;
 		width: 35rem;
 		margin: 0;
 	}
@@ -904,9 +937,372 @@ footer {
 	/*! FOOTER  */
 }
 
-@media screen and(min-width:990px) {
+@media screen and (min-width: 990px) {
+	.section-info h2 {
+		font-size: 3.5rem;
+		margin: 0 auto 2rem;
+	}
+
+	.navigations {
+		width: 60rem;
+	}
+
+	.section-info p {
+		font-size: 2rem;
+		padding: 0 22rem;
+	}
+
+	.nav-list {
+		max-width: 40rem;
+	}
+
+	/*! HEADER  */
+	/*! HERO  */
+	.hero {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		padding: 2rem;
+		margin-bottom: 5rem;
+	}
+
+	.img-con {
+		width: 100%;
+		margin: 0 auto 10rem;
+		order: 2;
+	}
+
+	.hero-article {
+		margin: 7rem 0 0;
+	}
+
+	.hero-article h1 {
+		font-size: 4rem;
+		text-align: left;
+	}
+
+	.hero-article p {
+		text-align: left;
+		font-size: 1.7rem;
+		padding: 0;
+		margin: 0 auto 3rem;
+	}
+
+	.hero-btn {
+		margin: 0;
+	}
+
+	/*! HERO  */
+	/*! FEATURES  */
+	.feature-nav {
+		margin: 0 auto 7rem;
+		max-width: 75rem;
+	}
+
+	.feat-nav {
+		font-size: 2rem;
+		width: 80%;
+	}
+
+	.feature-two .feat-img::after {
+		width: 60rem;
+		left: -35rem;
+	}
+
+	.feature {
+		grid-template-columns: repeat(2, 1fr);
+		margin-bottom: 4rem;
+	}
+
+	.feat-img {
+		position: relative;
+	}
+
+	.feat-img::after {
+		width: 45rem;
+		left: -20rem;
+	}
+
+	.feat-article {
+		margin: 0 0 15rem;
+		padding: 0 10rem 0 0;
+	}
+
+	.feat-article h2 {
+		font-size: 2.9rem;
+	}
+
+	.feat-article p {
+		font-size: 1.7rem;
+		margin-bottom: 3rem;
+	}
+
+	.feat-article button {
+		margin: 0;
+		padding: 0 2rem;
+	}
+
+	/*! FEATURES  */
+
+	/*! DOWNLOAD  */
+	.browsers-con {
+		display: flex;
+		flex-direction: row;
+		margin: 0 auto 15rem;
+		height: 65rem;
+		max-width: 110rem;
+	}
+
+	.ch {
+		align-self: flex-start;
+	}
+
+	.ff {
+		align-self: center;
+	}
+
+	.op {
+		align-self: flex-end;
+	}
+
+	/*! DOWNLOAD  */
+	/*! FAQS  */
+
+	.faqs {
+		margin: 2rem auto 14rem;
+	}
+
+	.faqs-con {
+		width: 70%;
+		max-width: 60rem;
+	}
+
+	.faq p {
+		font-size: 2.2rem;
+	}
+
+	.faqs button {
+		width: 14rem;
+	}
+	/*! FAQS  */
+	/*! FOOTER  */
+	.mainfooter {
+		padding: 0;
+	}
+	/*! FOOTER  */
 }
-@media screen and(min-width:1280px) {
+@media screen and (min-width: 1280px) {
+	.section-info h2 {
+		font-size: 4.5rem;
+	}
+
+	.section-info p {
+		font-size: 2.5rem;
+		padding: 0 25rem;
+	}
+
+	.main-logo {
+		width: 20rem;
+	}
+
+	.navigations {
+		width: 60rem;
+	}
+
+	.hero-article {
+		align-self: flex-start;
+		margin-top: 5rem;
+	}
+
+	.hero-article h1 {
+		font-size: 4.5rem;
+	}
+
+	.hero-article p {
+		font-size: 2.5rem;
+		margin-bottom: 5rem;
+	}
+
+	.feature {
+		margin-top: 10rem;
+		margin-bottom: 15rem;
+	}
+
+	.feat-img {
+		width: 40rem;
+		height: 25rem;
+		margin: 0 auto 10rem;
+		position: relative;
+	}
+
+	.feat-img::after {
+		width: 60rem;
+		height: 23rem;
+		left: -27rem;
+		border-radius: 0 15rem 15rem 0;
+		bottom: -8rem;
+	}
+
+	.feature-two .feat-img::after,
+	.feature-three .feat-img::after {
+		bottom: -15rem;
+		height: 30rem;
+	}
+
+	.feature-two .feat-img::after {
+		width: 50rem;
+		left: -17rem;
+	}
+
+	.feat-article {
+		margin: 0;
+		align-self: center;
+	}
+	.feat-article h2 {
+		font-size: 3.2rem;
+		margin: 0 auto 2rem;
+	}
+
+	.feat-article p {
+		font-size: 2.4rem;
+	}
+
+	.faqs {
+		margin: 2rem auto 14rem;
+	}
+
+	.faqs-con {
+		width: 70%;
+		max-width: 70rem;
+	}
+
+	.faq p {
+		font-size: 2.5rem;
+	}
+
+	/*! CONTACT   */
+
+	.contact h3 {
+		margin-bottom: 5rem;
+		font-size: 1.6rem;
+	}
+
+	.contact p {
+		font-size: 3.8rem;
+		margin: 0 auto 5rem;
+		width: 50rem;
+	}
+
+	.contact-con {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	input {
+		font-size: 1.7rem;
+		height: 5rem;
+		width: 35rem;
+	}
+
+	/*! CONTACT   */
+
+	.mainfooter {
+		max-width: 100rem;
+	}
 }
-@media screen and(min-width:1400px) {
+@media screen and (min-width: 1400px) {
+	.section-info h2 {
+		font-size: 4.5rem;
+	}
+
+	.section-info p {
+		font-size: 2.2rem;
+		padding: 0 30rem;
+	}
+
+	.main-logo {
+		width: 25rem;
+	}
+
+	.navigations {
+		width: 60rem;
+	}
+
+	.hero-article {
+		align-self: flex-start;
+		margin-top: 5rem;
+	}
+
+	.hero-article h1 {
+		font-size: 5rem;
+	}
+
+	.hero-article p {
+		font-size: 2.2rem;
+		margin-bottom: 5rem;
+	}
+
+	.img-con::after {
+		width: 90rem;
+		right: -47rem;
+		border-radius: 0 0 0 10rem;
+		bottom: 0;
+	}
+
+	.feature {
+		margin-top: 10rem;
+		margin-bottom: 15rem;
+	}
+
+	.feature-nav {
+		margin: 0 auto 7rem;
+		max-width: 100rem;
+	}
+
+	.feat-img {
+		width: 40rem;
+		height: 25rem;
+		margin: 0 auto 10rem;
+		position: relative;
+	}
+
+	.feat-img::after {
+		width: 60rem;
+		height: 23rem;
+		left: -27rem;
+		border-radius: 0 15rem 15rem 0;
+		bottom: -8rem;
+	}
+
+	.feature-two .feat-img::after,
+	.feature-three .feat-img::after {
+		bottom: -15rem;
+		height: 30rem;
+	}
+
+	.feature-two .feat-img::after {
+		width: 100rem;
+		left: -70rem;
+	}
+
+	.feat-article {
+		margin: 0;
+		align-self: center;
+	}
+	.feat-article h2 {
+		font-size: 3.2rem;
+		margin: 0 auto 2rem;
+	}
+
+	.feat-article p {
+		font-size: 2.4rem;
+	}
+
+	.faqs {
+		margin: 2rem auto 14rem;
+	}
+
+	.faq p {
+		font-size: 2.5rem;
+	}
 }
