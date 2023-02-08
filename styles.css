@@ -500,8 +500,13 @@ input {
 /*! CONTACT   */
 
 /*! FOOTER  */
-.mainfooter {
+
+footer {
 	background-color: var(--Very-Dark-Blue);
+	padding: 2rem 0;
+}
+
+.mainfooter {
 	padding: 2rem 0;
 }
 
@@ -843,9 +848,6 @@ input {
 	/*! CONTACT   */
 
 	/*! FOOTER  */
-	footer {
-		background-color: var(--Very-Dark-Blue);
-	}
 
 	.mainfooter {
 		padding: 2rem 0;
@@ -893,7 +895,6 @@ input {
 		font-size: 1.2rem;
 		font-weight: 600;
 		text-align: center;
-		padding: 0 0 2rem;
 	}
 
 	/*! FOOTER  */
