@@ -1267,9 +1267,9 @@ footer {
 	}
 
 	.feat-img::after {
-		width: 60rem;
-		height: 23rem;
-		left: -27rem;
+		width: 1000rem;
+		height: 26rem;
+		left: -78rem;
 		border-radius: 0 15rem 15rem 0;
 		bottom: -8rem;
 	}
