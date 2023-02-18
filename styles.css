@@ -704,6 +704,10 @@ footer {
 
 	/*! HERO  */
 
+	.hero {
+		overflow-x: hidden;
+	}
+
 	.img-con {
 		width: 60rem;
 		margin: 0 auto 10rem;

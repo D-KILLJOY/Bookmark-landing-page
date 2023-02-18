@@ -60,10 +60,13 @@ featNav.forEach((i) => {
 
 faq.forEach((i) => {
 	i.addEventListener("click", (e) => {
-		if (e.target.classList.contains("show-ans")) {
-			i.classList.remove("show-ans");
+		if (!e.target.classList.contains("show-ans")) {
+			faq.forEach((x) => {
+				x.classList.remove("show-ans");
+			});
+			i.classList.add("show-ans");
 		} else {
-			i.classList.toggle("show-ans");
+			i.classList.remove("show-ans");
 		}
 	});
 });
