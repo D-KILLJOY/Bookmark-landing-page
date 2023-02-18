@@ -1112,6 +1112,10 @@ footer {
 		width: 60rem;
 	}
 
+	.hero {
+		overflow-x: unset;
+	}
+
 	.hero-article {
 		align-self: flex-start;
 		margin-top: 5rem;
